@@ -1,0 +1,6 @@
+WITH employer as 
+(
+SELECT * FROM  ASSA_DW_DEV.DWH.DIM_EMPLOYER
+)
+
+SELECT * FROM employer
