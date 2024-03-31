@@ -1,13 +1,166 @@
-
 version: 2
 
 models:
-    - name: dim_employer
-      description: "A starter dbt model"
-      columns:
-          - name: employer_id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+  - name: DIM_EMPLOYER
+    description: "A test for dim employer"
+    columns:
+      - name: EMPLOYER_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_ASSESSMENT_EVENT_STATUS
+    description: "A test for dim assessment event status"
+    columns:
+      - name: ASSESSMENT_EVENT_STATUS_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_ASSESSMENT_EVENT_TYPE
+    description: "A test for dim assessment event type"
+    columns:
+      - name: ASSESSMENT_EVENT_TYPE_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_GRADE
+    description: "A test for dim grade"
+    columns:
+      - name: GRADE_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_INSTITUTION
+    description: "A test for dim institution"
+    columns:
+      - name: INSTITUTION_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_MEMBER
+    description: "A test for dim member"
+    columns:
+      - name: MEMBER_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_MEMBERSHIP_STATUS
+    description: "A test for dim membership status"
+    columns:
+      - name: MEMBERSHIP_STATUS_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_MEMBERSHIP_TYPE
+    description: "A test for dim membership type"
+    columns:
+      - name: MEMBERSHIP_TYPE_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_QUALIFICATION
+    description: "A test for dim qualification"
+    columns:
+      - name: QUALIFICATION_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  
+  - name: DIM_SCHEDULE_TYPE
+    description: "A test for dim schedule type"
+    columns:
+      - name: SCHEDULE_TYPE_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_SUBJECT
+    description: "A test for dim subject"
+    columns:
+      - name: SUBJECT_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: DIM_VENUE
+    description: "A test for dim venue"
+    columns:
+      - name: VENUE_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: FACT_ASSESSMENT_HISTORY
+    description: "A test for fact assessment history"
+    columns:
+      - name: MEMBER_KEY
+        description: "The primary key for this table"
+        tests:
+          - relationships:
+              to: ref('DIM_MEMBER')
+              field: MEMBER_KEY
+
+  - name: FACT_EMPLOYMENT_HISTORY
+    description: "A test for fact employment history"
+    columns:
+      - name: MEMBER_KEY
+        description: "The primary key for this table"
+        tests:
+          - relationships:
+              to: ref('DIM_MEMBER')
+              field: MEMBER_KEY
+
+  - name: FACT_MEMBERSHIP_HISTORY
+    description: "A test for fact assessment history"
+    columns:
+      - name: MEMBER_KEY
+        description: "The primary key for this table"
+        tests:
+          - relationships:
+              to: ref('DIM_MEMBER')
+              field: MEMBER_KEY
+
+  - name: FACT_QUALIFICATION_HISTORY
+    description: "A test for fact assessment history"
+    columns:
+      - name: MEMBER_KEY
+        description: "The primary key for this table"
+        tests:
+          - relationships:
+              to: ref('DIM_MEMBER')
+              field: MEMBER_KEY
+        
+  - name: FACT_MEMBER_MONTLY_SNAPSHOT
+    description: "A test for fact assessment history"
+    columns:
+      - name: MEMBER_KEY
+        description: "The primary key for this table"
+        tests:
+          - relationships:
+              to: ref('DIM_MEMBER')
+              field: MEMBER_KEY
+          
+
+
+
+
 

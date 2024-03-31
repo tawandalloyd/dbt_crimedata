@@ -1,0 +1,6 @@
+WITH assessment as 
+(
+SELECT * FROM  ASSA_DW_DEV.DWH.FACT_ASSESSMENT_HISTORY
+)
+
+SELECT * FROM assessment

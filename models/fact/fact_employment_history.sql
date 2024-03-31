@@ -1,0 +1,6 @@
+WITH employment as 
+(
+SELECT * FROM  ASSA_DW_DEV.DWH.FACT_EMPLOYMENT_HISTORY
+)
+
+SELECT * FROM employment
