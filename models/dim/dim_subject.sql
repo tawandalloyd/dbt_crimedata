@@ -1,0 +1,6 @@
+WITH subject as 
+(
+SELECT * FROM  ASSA_DW_DEV.DWH.DIM_SUBJECT
+)
+
+SELECT * FROM subject
