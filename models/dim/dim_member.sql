@@ -1,0 +1,6 @@
+WITH member as 
+(
+SELECT * FROM  ASSA_DW_DEV.DWH.DIM_MEMBER
+)
+
+SELECT * FROM member

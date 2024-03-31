@@ -1,0 +1,6 @@
+WITH membership as 
+(
+SELECT * FROM  ASSA_DW_DEV.DWH.DIM_MEMBERSHIP_TYPE
+)
+
+SELECT * FROM membership
