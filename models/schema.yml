@@ -19,7 +19,7 @@ models:
           - unique
           - not_null
 
-  - name: im_assessment_event_type
+  - name: dim_assessment_event_type
     description: "A test for dim assessment event type"
     columns:
       - name: ASSESSMENT_EVENT_TYPE_ID
