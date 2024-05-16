@@ -2,7 +2,6 @@ version: 2
 
 models:
   - name: dim_employer
-    schema: DWH
     description: "A test for dim employer"
     columns:
       - name: EMPLOYER_ID
@@ -12,7 +11,6 @@ models:
           - not_null
 
   - name: dim_assessment_event_status
-    schema: DWH
     description: "A test for dim assessment event status"
     columns:
       - name: ASSESSMENT_EVENT_STATUS_ID
@@ -22,7 +20,6 @@ models:
           - not_null
 
   - name: dim_assessment_event_type
-    schema: DWH
     description: "A test for dim assessment event type"
     columns:
       - name: ASSESSMENT_EVENT_TYPE_ID
@@ -32,7 +29,6 @@ models:
           - not_null
 
   - name: dim_grade
-    schema: DWH
     description: "A test for dim grade"
     columns:
       - name: GRADE_ID
@@ -42,7 +38,6 @@ models:
           - not_null
 
   - name: dim_institution
-    schema: DWH
     description: "A test for dim institution"
     columns:
       - name: INSTITUTION_ID
@@ -52,7 +47,6 @@ models:
           - not_null
 
   - name: dim_member
-    schema: DWH
     description: "A test for dim member"
     columns:
       - name: MEMBER_ID
@@ -62,7 +56,6 @@ models:
           - not_null
 
   - name: dim_membership_status
-    schema: DWH
     description: "A test for dim membership status"
     columns:
       - name: MEMBERSHIP_STATUS_ID
@@ -72,7 +65,6 @@ models:
           - not_null
 
   - name: dim_membership_type
-    schema: DWH
     description: "A test for dim membership type"
     columns:
       - name: MEMBERSHIP_TYPE_ID
@@ -82,7 +74,6 @@ models:
           - not_null
 
   - name: dim_qualification
-    schema: DWH
     description: "A test for dim qualification"
     columns:
       - name: QUALIFICATION_ID
@@ -92,7 +83,6 @@ models:
           - not_null
   
   - name: dim_schedule_type
-    schema: DWH
     description: "A test for dim schedule type"
     columns:
       - name: SCHEDULE_TYPE_ID
@@ -102,7 +92,6 @@ models:
           - not_null
 
   - name: dim_subject
-    schema: DWH
     description: "A test for dim subject"
     columns:
       - name: SUBJECT_ID
@@ -112,7 +101,6 @@ models:
           - not_null
 
   - name: dim_venue
-    schema: DWH
     description: "A test for dim venue"
     columns:
       - name: VENUE_ID
@@ -122,7 +110,6 @@ models:
           - not_null
 
   - name: fact_assessment_history
-    schema: DWH
     description: "A test for fact assessment history"
     columns:
       - name: MEMBER_KEY
@@ -133,7 +120,6 @@ models:
               field: MEMBER_KEY
 
   - name: fact_employment_history
-    schema: DWH
     description: "A test for fact employment history"
     columns:
       - name: MEMBER_KEY
@@ -144,7 +130,6 @@ models:
               field: MEMBER_KEY
 
   - name: fact_membership_history
-    schema: DWH
     description: "A test for fact membership history"
     columns:
       - name: MEMBER_KEY
@@ -155,7 +140,6 @@ models:
               field: MEMBER_KEY
 
   - name: fact_qualification_history
-    schema: DWH
     description: "A test for fact assessment history"
     columns:
       - name: MEMBER_KEY
@@ -166,7 +150,6 @@ models:
               field: MEMBER_KEY
         
   - name: fact_member_montly_snapshot
-    schema: DWH
     description: "A test for fact assessment history"
     columns:
       - name: MEMBER_KEY
